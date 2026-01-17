@@ -7,8 +7,8 @@
     <nav class="nav-links">
       <router-link to="/" class="nav-link">Accueil</router-link>
       <router-link to="/about" class="nav-link">À propos</router-link>
-      <router-link to="/skills" class="nav-link">Compétences</router-link>
-      <router-link to="/projects" class="nav-link">Projets</router-link>
+      <router-link to="/skill" class="nav-link">Compétences</router-link>
+      <router-link to="/project" class="nav-link">Projets</router-link>
       <router-link to="/contact" class="nav-link">Contact</router-link>
     </nav>
   </header>
