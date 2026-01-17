@@ -2,7 +2,7 @@
   <header class="header">
     <div class="logo-section">
       <img src="../assets/logo.png" alt="Logo" class="logo" />
-      <span class="title">MON PORTFOLIO</span>
+      <span class="title">Arcadia Dev</span>
     </div>
     <nav class="nav-links">
       <router-link to="/" class="nav-link">Accueil</router-link>
@@ -21,7 +21,7 @@ export default {};
 <style scoped>
 .header {
   width: 100%;                 /* full width */
-  background-color: #404E3B;   /* couleur de fond sur toute la largeur */
+  background-color: #16161a;   /* couleur de fond sur toute la largeur */
   display: flex;
   justify-content: space-between;
   align-items: center;

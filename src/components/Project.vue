@@ -1,22 +1,17 @@
 <template>
-    <section :style="{backgroundImage: `url('${theme}')`}">
-
-            <p>Parcourez mes</p>
-            <h1>Projets</h1>
-        
-
-        <div class="projet">
+    <section>
+        <div class="left">
             <div class="projet-container">
                 <img src="..//assets/cv.png" alt="Cv Icon" class="icon">
                 <h3>Projet CV</h3>
                 <div class="button-container">
                     <a href="https://github.com/userXXIIXII/CV-CEF"
                     target="_blank">
-                        <button>GitHub</button>
+                        <button class="button">GitHub</button>
                     </a>
                     <a href="https://userxxiixii.github.io/CV-CEF/"
                     target="_blank">
-                        <button>Démo</button>
+                        <button class="button">Démo</button>
                     </a>
                 </div>
             </div>
@@ -26,51 +21,61 @@
                 <div class="button-container">
                     <a href="https://github.com/userXXIIXII/my-portfolio-vue"
                     target="_blank">
-                        <button>GitHub</button>
+                        <button class="button">GitHub</button>
                     </a>
                     <a href="http://localhost:5175/"
                     target="_blank">
-                        <button>Démo</button>
+                        <button class="button">Démo</button>
                     </a>
                 </div>
             </div>
+        </div>
+        
+        <div class="right">
+            <p>Parcourez mes</p>
+            <h1>Projets</h1>
+            <p>
+                Sur cette page, vous trouverez un aperçu détaillé de <br>
+                mes réalisations en développement web, du front-end <br>
+                au back-end. Chaque projet illustre non seulement ma <br>
+                maîtrise des technologies modernes, mais aussi ma <br>
+                capacité à concevoir des interfaces intuitives, à résoudre <br>
+                des problèmes complexes et à créer des expériences <br>
+                utilisateurs fluides et engageantes.
+            </p>
+            <router-link to="/contact">
+                <button class="button2">Parlons de votre projet</button>
+            </router-link>
         </div>
     </section>
 </template>
 
 <script setup>
-    import theme from "..//assets/background.png"
+
 </script>
 
 <style scoped>
     section {        
         flex: 1;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        background-position: center;
-        justify-content: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 100%;
+        justify-content: space-evenly;
+        background-color: #242629;
     }
 
-    .projet {
+    .left {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: row;
         gap: 2rem;
-        margin: 2rem 0;
     }
 
     .projet-container {
-        border: 0.1rem solid #e6e6e6;
-        border-radius: 2rem;
+        border-radius: 2%;
         box-shadow: 10px 10px 20px black;
+        background-color: #16161a;
 
         text-align: center;
-        text-shadow: 10px 10px 20px black;
 
         display: flex;
         flex-direction: column;
@@ -79,8 +84,6 @@
 
         width: 400px;
         padding: 1.5rem;
-
-        background-color: #404e3b;
     }
     
     .icon {
@@ -93,24 +96,32 @@
         gap: 1rem;
     }
 
-    button {
-        border: 0.01rem solid #e6e6e6;
-        border-radius: 1rem;
+    .button {
+        background-color: #7f5af0;
+        color: #fffffe;
+        height: 45px;
+        width: 100px;
         transition: 0.3s ease;
-        box-shadow: 7px 7px 15px black;
-        background-color: #bac8b1;
-        color: #404e3b;
-        font-weight: bolder;
+        box-shadow: 10px 10px 10px black;
     }
 
-    button:hover {
+    .button:hover {
         transform: scale(1.10);
     }
 
-    p, h1 {
-        color: #404e3b;
-        text-shadow: 10px 10px 20px #6C8480;
+    .button2 {
+        background-color: #7f5af0;
+        color: #fffffe;
+        height: 75px;
+        width: 200px;
+        transition: 0.3s ease;
+        box-shadow: 10px 10px 10px black;
     }
+
+    .button2:hover {
+        transform: scale(1.10);
+    }
+
     
 
 </style>

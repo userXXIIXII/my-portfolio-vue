@@ -1,9 +1,13 @@
 <template>
   <div class="skill">
-    <div class="skill-header">
-      <span>{{ name }}</span>
-      <span>{{ level }}%</span>
+   <div class="skill-header">
+      <div class="skill-info">
+        <img v-if="image" :src="image" :alt="name" class="skill-icon" />
+        <span class="skill-name">{{ name }}</span>
+      </div>
+      <span class="skill-level">{{ level }}%</span>
     </div>
+
 
     <div class="progress-bar">
       <div
@@ -17,7 +21,8 @@
 <script setup>
 defineProps({
   name: String,
-  level: Number
+  level: Number,
+  image: String
 })
 </script>
 
@@ -28,18 +33,31 @@ defineProps({
 
 .skill-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
   align-items: center;
   margin-bottom: 8px;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #e6e6e6; /* gris foncé */
+}
+
+.skill-info {
+  display: flex;
+  align-items: center; 
+  gap: 10px;           
+}
+
+.skill-name {
+  font-weight: 600;
+}
+
+.skill-level {
+  font-weight: 500;
 }
 
 .progress-bar {
   width: 100%;
   height: 10px;
-  background-color: #e6e6e6; /* gris clair */
+  background-color: #fffffe; 
   border-radius: 999px;
   overflow: hidden;
 }
@@ -47,13 +65,15 @@ defineProps({
 .progress {
   height: 100%;
   width: 0;
-  background: linear-gradient(
-    90deg,
-    #7B9669, /* bleu */
-    #6C8480  /* cyan */
-  );
+  background-color: #7f5af0;
   border-radius: 999px;
   transition: width 1s ease-in-out;
+}
+
+.skill-icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
 }
 
 </style>

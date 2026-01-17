@@ -1,43 +1,66 @@
 <template>
-    <section class="home" :style="{ backgroundImage: `url('${theme}')` }">
-        <img src="../assets/pp-home.jpg" alt="photo-profile" class="pp">
-        <p>Salut! Je suis</p>
-        <h1>Aarin Deb</h1>
-        <h2>Développeur Front-End & Back-End</h2>
+    <section class="home-container">
+        <div class="left">           
+            <h2>Salut! Je suis</h2>
+            <h1>Aarin Deb</h1>
+            <p>Je code, je crée et j’optimise le web. <br> 
+                Ici, vous trouverez mes projets, <br> 
+                mes compétences et un peu de mon univers numérique.
+            </p>
+            <router-link to="/about">
+                <button class="button">C'est parti !</button>
+            </router-link>
+        </div>
+        <div class="right">
+            <img src="../assets/intropic.jpg" alt="photo-profile" class="pp">
+        </div>
+        
     </section>
 </template>
 
 <script setup>
-    import theme from "../assets/background.png"
 </script>
 
 <style scoped>
-    .home{
+    .home-container{
         flex: 1;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-around;
         align-items: center;
         gap: 1.5rem;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100%;
-        text-align: center;
-        height: 100%;      
+        background-color: #16161a;    
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
     }
 
     .pp {
-        width: 250px;
-        height: 250px;
+        width: 450px;
+        height: 450px;
         border-radius: 50%;
         object-fit: cover;
         margin: 25px 0 20px 0;
-        box-shadow: 10px 10px 20px #6C8480;
+        box-shadow: 10px 10px 20px black;
     }
 
-    p, h1, h2 {
-        color: #404e3b;
-        text-shadow: 10px 10px 20px #6C8480;
+    .button {
+        background-color: #7f5af0;
+        color: #fffffe;
+        height: 75px;
+        width: 200px;
+        transition: 0.3s ease;
+        box-shadow: 10px 10px 10px black;
     }
+
+    .button:hover {
+        transform: scale(1.10);
+    }
+
+
+    
 </style>

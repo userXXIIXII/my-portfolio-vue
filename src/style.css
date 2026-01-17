@@ -1,7 +1,8 @@
 :root {
-  font-family: 'Inria Serif';
-  line-height: 1.5;
-  font-weight: 1000;
+  font-family: proximanova, sans-serif;
+  line-height: 1.8;
+  font-weight: 400;
+  font-size: 18px;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -30,6 +31,7 @@ body {
 
 p {
   font-size: 1.2em;
+  color: #94a1b2;
 }
 
 h1 {

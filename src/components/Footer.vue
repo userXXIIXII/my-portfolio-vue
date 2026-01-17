@@ -18,7 +18,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-color: #404e3b;
+        background-color: #16161a;
         height: 100px;
     }
 </style>
