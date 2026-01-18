@@ -3,14 +3,14 @@
         <div class="left">
             <p>Découvre mes</p>
             <h1>Compétences</h1>
-            <p>Découvrez mes compétences en développement web et <br>
-                mes outils favoris pour créer des applications modernes <br>
-                et performantes. Du HTML et CSS aux frameworks <br>
-                JavaScript comme Vue.js, je maîtrise les technologies <br>
-                nécessaires pour concevoir des interfaces réactives, <br>
-                optimiser l’expérience utilisateur et développer des <br>
-                projets complets, du front-end au back-end. Parcourez <br>
-                mes compétences pour voir comment je transforme des idées <br>
+            <p class="bio">Découvrez mes compétences en développement web et 
+                mes outils favoris pour créer des applications modernes 
+                et performantes. Du HTML et CSS aux frameworks 
+                JavaScript comme Vue.js, je maîtrise les technologies 
+                nécessaires pour concevoir des interfaces réactives, 
+                optimiser l’expérience utilisateur et développer des 
+                projets complets, du front-end au back-end. Parcourez 
+                mes compétences pour voir comment je transforme des idées 
                 en applications fonctionnelles et élégantes.
             </p>
             <router-link to="/project">
@@ -84,7 +84,7 @@
         align-items: center;
         justify-content: space-around; 
         background-color: #16161a;    
-        max-height: 737.6px; 
+        
     }
 
     .competences {
@@ -98,16 +98,24 @@
         border-radius: 2%;
         text-align: center;
         padding: 2rem;
-        width: 400px;
+        padding-top: 1.3rem;
+        height: 600px;
+        width: 100%;
+        max-width: 400px;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 0.5rem;
         box-shadow: 10px 10px 10px black;
         background-color: #242629;
     }
 
-        .button {
+    .bio {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .button {
         background-color: #7f5af0;
         color: #fffffe;
         height: 75px;
@@ -119,4 +127,46 @@
     .button:hover {
         transform: scale(1.10);
     }
+
+@media (max-width: 768px) {
+    section {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .left {
+        max-width: 100%;
+    }
+
+    .competences {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        padding: 0;
+    }
+
+    .comp-container {
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        width: 150px;
+        height: 55px;
+        font-size: 0.9rem;
+    }
+}
 </style>

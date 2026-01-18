@@ -1,73 +1,65 @@
 <template>
-<!--    <section>
-        <p>Dennons vie à vos idées</p>
-        <h1>Collaborez avec moi</h1>
-
-        <div class="container">
-            <div class="contact-container">
-                <h1>Aarin Deb</h1>
-                <h2>Développeur Full-Stack</h2>
-
-                <div class="info">
-                    <img src="..//assets/smartphone.png" 
-                    alt="Smartphone Icon"
+    <section>
+        <div class="left">
+            <h2>Emplacement</h2>
+            <p>40 Avenue de la Division Leclerc,<br> 94230 Cachan</p>
+            
+            <h2>Suivez moi</h2>  
+            <div class="social">  
+                <a href="https://github.com/userXXIIXII" target="_blank">
+                    <img src="../assets/github.png" 
+                    alt="github Icon"
                     class="icon">
-                    <p>06 50 24 13 97</p>
-                </div>
+                </a>
 
-                <div class="info">
-                    <img src="..//assets/email.png" 
-                    alt="Mail Icon"
+                <a href="https://www.instagram.com/arcadia.dev/" target="_blank">
+                    <img src="../assets/insta.png" 
+                    alt="github Icon"
                     class="icon">
-                    <p>aarindeb2003@gmail.com</p>
-                </div>
+                </a>
 
-                <div class="info">
-                    <img src="..//assets/map.png" 
-                    alt="Location Icon"
+                <a href="https://www.linkedin.com/in/aarin-deb/" target="_blank">
+                    <img src="../assets/linkedin.png" 
+                    alt="github Icon"
                     class="icon">
-                    <p>Paris, FRANCE</p>
-                </div>
+                </a>
+            </div>   
+        </div>
+
+        <div class="contact">
+            <h1>Contact</h1>
+            <p>Une question, un projet ou une collaboration ? 
+                N'hésitez pas à me contacter.
+            </p>
+
+            <form @submit.prevent="handleSubmit" class="contact-form">
+            <div class="form-group">
+                <label>Nom</label>
+                <input type="text" v-model="form.name" required />
             </div>
-            <div class="photo">
-                <img src="..//assets/ppcontact.jpg" 
-                alt="Photo Contact" 
-                class="photoContact">
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" v-model="form.email" required />
             </div>
 
-        </section>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea v-model="form.message" required></textarea>
+            </div>
 
-        </div>-->
+            <button class="button" type="submit">
+                Envoyer le message
+            </button>
 
-  <section class="contact">
-    <h1>Contact</h1>
-    <p>Une question, un projet ou une collaboration ? N’hésitez pas à me contacter.</p>
+            <p v-if="success" class="success">
+                Message envoyé avec succès !
+            </p>
+            </form>
+        </div>
 
-    <form @submit.prevent="handleSubmit" class="contact-form">
-      <div class="form-group">
-        <label>Nom</label>
-        <input type="text" v-model="form.name" required />
-      </div>
-
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" v-model="form.email" required />
-      </div>
-
-      <div class="form-group">
-        <label>Message</label>
-        <textarea v-model="form.message" required></textarea>
-      </div>
-
-      <button class="button" type="submit">
-        Envoyer le message
-      </button>
-
-      <p v-if="success" class="success">
-        Message envoyé avec succès !
-      </p>
-    </form>
-  </section>
+    
+</section>
 </template>
 
 <script setup>
@@ -95,114 +87,96 @@ const handleSubmit = () => {
 
 
 <style scoped>
-/*    section {        
+
+    section {
         flex: 1;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        background-position: center;
-        justify-content: center;
+        justify-content: space-evenly;
         background-color: #16161a;
     }
 
-    .photoContact {
-        max-width: 100%;
-        height: 400px;
-        border: 0.05rem solid #e6e6e6;
-        border-radius: 0.75rem;
-    }
-
-    .container {
+    .social {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .contact-container {
-        border-radius: 2%;
-        background-color: #242629;
-    }
-
-    .info {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
+        justify-content: space-between;
     }
 
     .icon {
-        height: 40px;
-        width: 40px;
-    } */
+        height: 60px;
+        filter: drop-shadow(10px 10px 10px black);
+    }
 
-     .contact {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+    .contact {
+    border-radius: 2%;
+    box-shadow: 10px 10px 10px black;
+    padding: 2rem;
+    text-align: center;
+    background-color: #242629;
+    }
 
-.contact h1 {
-  margin-bottom: 0.5rem;
-}
+    .contact h1 {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    }
 
-.contact p {
-  margin-bottom: 2rem;
-  color: #94a1b2;
-}
+    .contact p {
+    margin-bottom: 0.5rem;
+    }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
+    .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
+    .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    }
 
-label {
-  margin-bottom: 0.4rem;
-  font-weight: 500;
-}
+    label {
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    }
 
-input,
-textarea {
-  padding: 0.8rem;
-  border-radius: 8px;
-  border: none;
-  background-color: #242629;
-  color: #fffffe;
-  font-size: 1rem;
-}
+    input,
+    textarea {
+    padding: 0.7rem;
+    border-radius: 2%;
+    border: none;
+    background-color: #16161a;
+    color: #fffffe;
+    font-size: 0.95rem;
+    }
 
-textarea {
-  resize: none;
-  min-height: 120px;
-}
+    textarea {
+    resize: none;
+    min-height: 120px;
+    }
 
-.button {
-  margin-top: 1rem;
-  padding: 0.8rem;
-  border-radius: 8px;
-  border: none;
-  background-color: #7f5af0;
-  color: #fffffe;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
+    .button {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #7f5af0;
+    color: #fffffe;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 10px 10px 10px black;
+    }
 
-.button:hover {
-  transform: scale(1.05);
-}
+    .button:hover {
+    transform: scale(1.05);
+    }
 
-.success {
-  margin-top: 1rem;
-  color: #2cb67d;
-}
+    .success {
+    margin-top: 1rem;
+    color: #2cb67d;
+    }
 
 </style>

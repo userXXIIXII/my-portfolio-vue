@@ -25,17 +25,17 @@
             </div>
         
             <p class="bio">
-                Ayant suivi une formation intensive en développement web et web mobile,<br> 
-                j'ai acquis une solide base de compétences couvrant les principaux<br>
-                langages de programmation, frameworks et technologies nécessaires<br> 
-                pour concevoir, développer et déployer des applications web complètes.<br>
-                Cette formation m'a permis de maîtriser les concepts fondamentaux<br>
-                du développement web, notamment HTML, CSS, JavaScript,<br>
-                ainsi que l'utilisation de frameworks tels que React, Angular <br>
-                et Node.js. J'ai également acquis une expérience pratique en <br>
-                travaillant sur des projets réels, ce qui m'a permis d'affiner<br>
-                mes compétences techniques et de développer ma capacité à <br>
-                résoudre efficacement les problèmes rencontrés lors du <br>
+                Ayant suivi une formation intensive en développement web et web mobile, 
+                j'ai acquis une solide base de compétences couvrant les principaux
+                langages de programmation, frameworks et technologies nécessaires
+                pour concevoir, développer et déployer des applications web complètes.
+                Cette formation m'a permis de maîtriser les concepts fondamentaux
+                du développement web, notamment HTML, CSS, JavaScript,
+                ainsi que l'utilisation de frameworks tels que React, Angular 
+                et Node.js. J'ai également acquis une expérience pratique en 
+                travaillant sur des projets réels, ce qui m'a permis d'affiner
+                mes compétences techniques et de développer ma capacité à 
+                résoudre efficacement les problèmes rencontrés lors du 
                 développement d'applications web.
             </p>
         </div>
@@ -66,7 +66,8 @@
         border-radius: 2%;
         box-shadow: 10px 10px 20px black;
         padding: 1.5rem;
-        width: 400px;
+        width: 100%;
+        max-width: 400px;
         height: 200px;
         display: flex;
         flex-direction: column;
@@ -86,6 +87,7 @@
 
     .bio{
         margin: 0 auto;
+        max-width: 750px;
     }
 
     .head {
@@ -97,9 +99,6 @@
     }
 
     .button {
-        position: absolute; 
-        bottom: 50px;       
-        right: 50px; 
         background-color: #7f5af0;
         color: #fffffe;
         height: 75px;
@@ -110,6 +109,47 @@
 
     .button:hover {
         transform: scale(1.10);
+    }
+
+    @media (max-width: 768px) {
+        section {
+            flex-direction: column;
+            padding: 20px;
+            gap: 40px;
+        }
+
+        .button {
+            height: 55px;
+            width: 150px;
+            font-size: 0.9rem;
+            right: 150px;
+            bottom: 20px;
+        }
+
+        .icon{
+            height: 50px;
+        }
+
+        .details-container {
+            max-width: 250px;
+            width: 100%;
+        }
+
+        .left {
+            gap: 15px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
     }
 
 </style>

@@ -1,7 +1,7 @@
 <template>
     <section class="home-container">
         <div class="left">           
-            <h2>Salut! Je suis</h2>
+            <h2>Salut!👋 Je suis</h2>
             <h1>Aarin Deb</h1>
             <p>Je code, je crée et j’optimise le web. <br> 
                 Ici, vous trouverez mes projets, <br> 
@@ -61,6 +61,39 @@
         transform: scale(1.10);
     }
 
+    @media (max-width: 768px) {
+        .home-container {
+            display: flex;
+            flex-direction: column-reverse;
+            padding: 20px;
+        }
 
-    
+        .pp {
+            width: 250px;
+            height: 250px;
+            margin: 0px;
+        }
+
+        .button {
+            height: 55px;
+            width: 150px;
+            font-size: 0.9rem;
+        }
+
+        .left {
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
 </style>
