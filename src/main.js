@@ -23,3 +23,10 @@ const router = createRouter({
 })
 
 createApp(App).use(router).mount('#app')
+
+router.afterEach(() => {
+  // seulement si la page est scrollable (mobile)
+  if (window.innerWidth <= 768) {
+    window.scrollTo(0, 0)
+  }
+})

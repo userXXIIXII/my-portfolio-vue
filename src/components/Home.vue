@@ -61,7 +61,7 @@
         transform: scale(1.10);
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         .home-container {
             display: flex;
             flex-direction: column-reverse;
@@ -94,6 +94,13 @@
 
         p {
             font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .home-container {
+            flex-direction: column-reverse;
+            padding-bottom: 20px;
         }
     }
 </style>

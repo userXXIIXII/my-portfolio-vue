@@ -191,7 +191,7 @@ const closeMenu = () => {
 
   .nav-links {
     width: 200px;
-    padding: 80px 15px;
+    padding-top: 20px;
     gap: 20px;
   }
 

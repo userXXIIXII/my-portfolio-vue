@@ -35,12 +35,12 @@
             <p>Parcourez mes</p>
             <h1>Projets</h1>
             <p>
-                Sur cette page, vous trouverez un aperçu détaillé de <br>
-                mes réalisations en développement web, du front-end <br>
-                au back-end. Chaque projet illustre non seulement ma <br>
-                maîtrise des technologies modernes, mais aussi ma <br>
-                capacité à concevoir des interfaces intuitives, à résoudre <br>
-                des problèmes complexes et à créer des expériences <br>
+                Sur cette page, vous trouverez un aperçu détaillé de 
+                mes réalisations en développement web, du front-end 
+                au back-end. Chaque projet illustre non seulement ma 
+                maîtrise des technologies modernes, mais aussi ma 
+                capacité à concevoir des interfaces intuitives, à résoudre 
+                des problèmes complexes et à créer des expériences 
                 utilisateurs fluides et engageantes.
             </p>
             <router-link to="/contact">
@@ -70,6 +70,11 @@
         gap: 2rem;
     }
 
+    .right {
+        max-width: 700px;
+        width: 100%;
+    }
+
     .projet-container {
         border-radius: 2%;
         box-shadow: 10px 10px 20px black;
@@ -82,7 +87,6 @@
         align-items: center;
         gap: 1rem;
 
-        width: 400px;
         padding: 1.5rem;
     }
     
@@ -122,6 +126,54 @@
         transform: scale(1.10);
     }
 
+    @media (max-width: 768px) {
+        section {        
+        flex-direction: column-reverse;
+        padding: 1rem;
+        gap: 20px;
+    }
+
+    .left {
+        flex-direction: column;
+    }
+
+    .projet-container {
+        width: 200px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        width: 100px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .button2 {
+        width: 150px;
+        height: 55px;
+        font-size: 0.9rem;
+    }
+
+    }
+
+    @media (max-width: 1024px) {
+        section {
+            flex-direction: column-reverse;
+            padding: 20px;
+            gap: 20px;
+        }
+    }
     
 
 </style>

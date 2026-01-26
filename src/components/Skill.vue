@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="left">
-            <p>Découvre mes</p>
+            <p>Découvrez mes</p>
             <h1>Compétences</h1>
             <p class="bio">Découvrez mes compétences en développement web et 
                 mes outils favoris pour créer des applications modernes 
@@ -130,7 +130,7 @@
 
 @media (max-width: 768px) {
     section {
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
         padding: 1rem;
     }
@@ -168,5 +168,13 @@
         height: 55px;
         font-size: 0.9rem;
     }
+
+    }
+    
+    @media (max-width: 1024px) {
+        section {
+            flex-direction: column;
+            padding: 20px;
+        }
 }
 </style>

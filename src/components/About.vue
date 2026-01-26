@@ -152,4 +152,11 @@
         }
     }
 
+     @media (max-width: 1024px) {
+        section {
+            flex-direction: column;
+            padding-bottom: 20px;
+        }
+     }
+
 </style>

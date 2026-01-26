@@ -179,4 +179,30 @@ const handleSubmit = () => {
     color: #2cb67d;
     }
 
+    @media (max-width: 768px) {
+        section {
+            flex-direction: column-reverse;
+            padding: 1rem;
+        }
+
+        h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+    }
+
+    @media (max-width: 1024px) {
+        section {
+            flex-direction: column-reverse;
+            padding: 20px;
+        }
+    }
+
 </style>
