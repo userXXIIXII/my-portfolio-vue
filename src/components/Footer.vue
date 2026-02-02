@@ -1,5 +1,6 @@
 <template>
     <section class="footer">
+        <h2 class="hidden">Footer</h2>
         <div class="icon-container">
             <a href="https://github.com/userXXIIXII" target="_blank"> 
                 <img src="../assets/github.png" alt="github icon" class="icon">

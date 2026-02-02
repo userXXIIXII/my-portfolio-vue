@@ -13,8 +13,8 @@
                 mes compétences pour voir comment je transforme des idées 
                 en applications fonctionnelles et élégantes.
             </p>
-            <router-link to="/project">
-                <button class="button">Mes réalisations</button>
+            <router-link to="/project" class="button">
+                Mes réalisations
             </router-link>
         </div>
         
@@ -100,7 +100,7 @@ onMounted(() => {
         margin: 2rem 0;
     }
 
-       .comp-container {
+    .comp-container {
         border-radius: 2%;
         text-align: center;
         padding: 2rem;
@@ -121,18 +121,6 @@ onMounted(() => {
         max-width: 800px;
     }
 
-    .button {
-        background-color: #7f5af0;
-        color: #fffffe;
-        height: 75px;
-        width: 200px;
-        transition: 0.3s ease;
-        box-shadow: 10px 10px 10px black;
-    }
-
-    .button:hover {
-        transform: scale(1.10);
-    }
 
 @media (max-width: 768px) {
     section {
@@ -169,13 +157,7 @@ onMounted(() => {
         font-size: 0.9rem;
     }
 
-    .button {
-        width: 150px;
-        height: 55px;
-        font-size: 0.9rem;
-    }
-
-    }
+}
     
     @media (max-width: 1024px) {
         section {

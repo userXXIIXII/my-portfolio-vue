@@ -1,6 +1,6 @@
 <template>
     <section>
-
+        <h2 class="hidden">A propos</h2>
         <div class="left">
             <div class="details-container">
                 <div class="head">
@@ -40,8 +40,8 @@
             </p>
         </div>
 
-        <router-link to="/skill">
-                <button class="button">Mes outils et langages</button>
+        <router-link to="/skill" class="button">
+            Mes outils et langages
         </router-link>
     </section>
 </template>
@@ -101,19 +101,6 @@ onMounted(() => {
 
     .head > h2 {
         padding-left: 20px;
-    }
-
-    .button {
-        background-color: #7f5af0;
-        color: #fffffe;
-        height: 75px;
-        width: 200px;
-        transition: 0.3s ease;
-        box-shadow: 10px 10px 10px black;
-    }
-
-    .button:hover {
-        transform: scale(1.10);
     }
 
     @media (max-width: 768px) {

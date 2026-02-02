@@ -6,12 +6,12 @@
                 <h3>Projet CV</h3>
                 <div class="button-container">
                     <a href="https://github.com/userXXIIXII/CV-CEF"
-                    target="_blank">
-                        <button class="button">GitHub</button>
+                    target="_blank" class="buttonP">
+                        GitHub
                     </a>
                     <a href="https://userxxiixii.github.io/CV-CEF/"
-                    target="_blank">
-                        <button class="button">Démo</button>
+                    target="_blank" class="buttonP">
+                        Démo
                     </a>
                 </div>
             </div>
@@ -20,12 +20,12 @@
                 <h3>Projet Portfolio</h3>
                 <div class="button-container">
                     <a href="https://github.com/userXXIIXII/my-portfolio-vue"
-                    target="_blank">
-                        <button class="button">GitHub</button>
+                    target="_blank" class="buttonP">
+                        GitHub
                     </a>
                     <a href="http://localhost:5175/"
-                    target="_blank">
-                        <button class="button">Démo</button>
+                    target="_blank" class="buttonP">
+                        Démo
                     </a>
                 </div>
             </div>
@@ -43,8 +43,8 @@
                 des problèmes complexes et à créer des expériences 
                 utilisateurs fluides et engageantes.
             </p>
-            <router-link to="/contact">
-                <button class="button2">Parlons de votre projet</button>
+            <router-link to="/contact" class="button">
+                Parlons de votre projet
             </router-link>
         </div>
     </section>
@@ -104,29 +104,21 @@ onMounted(() => {
         gap: 1rem;
     }
 
-    .button {
+    .buttonP {
+        border-radius: 8px;
+        padding: 0.6em 1.2em;
+        text-align: center;
+        font-size: 1em;
+        font-weight: 500;
+        font-family: inherit;
         background-color: #7f5af0;
         color: #fffffe;
-        height: 45px;
-        width: 100px;
-        transition: 0.3s ease;
         box-shadow: 10px 10px 10px black;
-    }
-
-    .button:hover {
-        transform: scale(1.10);
-    }
-
-    .button2 {
-        background-color: #7f5af0;
-        color: #fffffe;
-        height: 75px;
-        width: 200px;
+        cursor: pointer;
         transition: 0.3s ease;
-        box-shadow: 10px 10px 10px black;
     }
 
-    .button2:hover {
+    .buttonP:hover {
         transform: scale(1.10);
     }
 
@@ -154,18 +146,6 @@ onMounted(() => {
     }
 
     p {
-        font-size: 0.9rem;
-    }
-
-    .button {
-        width: 100px;
-        height: 40px;
-        font-size: 0.9rem;
-    }
-
-    .button2 {
-        width: 150px;
-        height: 55px;
         font-size: 0.9rem;
     }
 

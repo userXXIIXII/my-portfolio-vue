@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="app">
     <Header />      
     <main>
       <div class="page">
@@ -29,7 +29,7 @@ html, body {
   padding: 0;
 }
 
-#app {
+.app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;

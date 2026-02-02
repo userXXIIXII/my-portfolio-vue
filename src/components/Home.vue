@@ -1,14 +1,14 @@
 <template>
     <section class="home-container">
         <div class="left">           
-            <h2>Salut!👋 Je suis</h2>
+            <p>Salut!👋 Je suis</p>
             <h1>Aarin Deb</h1>
             <p>Je code, je crée et j’optimise le web. <br> 
                 Ici, vous trouverez mes projets, <br> 
                 mes compétences et un peu de mon univers numérique.
             </p>
-            <router-link to="/about">
-                <button class="button">C'est parti !</button>
+            <router-link to="/about" class="button">
+                C'est parti !
             </router-link>
         </div>
         <div class="right">
@@ -16,16 +16,16 @@
         </div>
         <div class="project">
             <img src="../assets/cv.png" alt="CV Logo" class="logo">
-            <h3>Ma dernière création</h3>
+            <h2>Ma dernière création</h2>
             
             <div class="project-container">
-            <button @click="openModal">Ouvrir</button>
+            <button @click="openModal" class="button">Ouvrir</button>
 
                 <div class="modal-container" :class="{ show: isModalOpen }" 
                 @click.self="closeModal">
                     <div class="modal">
-                        <h1>CV - HTML/CSS</h1>
-                        <h2>31/01/2024</h2>
+                        <h3>CV - HTML/CSS</h3>
+                        <h4>31/01/2024</h4>
                         <img src="../assets/CV-html.png" 
                         alt="Projet IMG" class="project-img">
                         <p>
@@ -37,14 +37,17 @@
                             du HTML et le stylisme de base avec CSS.
                         </p>
 
-                        <a href="https://userxxiixii.github.io/CV-CEF/" target="_blank">
-                            <button>Démo</button>
-                        </a>
-                        <a href="https://github.com/userXXIIXII/CV-CEF" target="_blank">
-                            <button>GitHub</button>
-                        </a>                       
-
-                        <button @click="closeModal">Fermer</button>
+                        <div class="modal-button-container">
+                            <a href="https://userxxiixii.github.io/CV-CEF/" target="_blank" class="button">
+                                Démo
+                            </a>
+                            <a href="https://github.com/userXXIIXII/CV-CEF" target="_blank" class="button">
+                                GitHub
+                            </a>   
+                            <button @click="closeModal" class="button">
+                                Fermer
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,7 +89,6 @@
         cursor: pointer;
     }
 
-
     .logo {
         height: 150px;
         filter: drop-shadow(10px 10px 10px black);
@@ -112,21 +114,6 @@
         pointer-events: auto;
     }
 
-    .modal button {
-        background-color: #7f5af0;
-        color: #fffffe;
-        height: 45px;
-        width: 100px;
-        margin: 5px;
-        box-shadow: 10px 10px 10px black;
-        cursor: pointer;
-        transition: 0.3s ease;
-    }
-
-    .modal button:hover {
-        transform: scale(1.10);
-    }
-
     .modal {
         background-color: #16161a;
         padding: 30px;
@@ -135,6 +122,12 @@
         width: 600px;
         max-width: 100%;
         text-align: center;
+    }
+
+    .modal-button-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
     }
 
     .project-img {
@@ -169,18 +162,7 @@
         box-shadow: 10px 10px 20px black;
     }
 
-    .button {
-        background-color: #7f5af0;
-        color: #fffffe;
-        height: 75px;
-        width: 200px;
-        transition: 0.3s ease;
-        box-shadow: 10px 10px 10px black;
-    }
-
-    .button:hover {
-        transform: scale(1.10);
-    }
+  
 
     @media (max-width: 767px) {
         .home-container {
@@ -193,12 +175,6 @@
             width: 250px;
             height: 250px;
             margin: 0px;
-        }
-
-        .button {
-            height: 55px;
-            width: 150px;
-            font-size: 0.9rem;
         }
 
         .left {
@@ -216,6 +192,7 @@
         p {
             font-size: 0.9rem;
         }
+
     }
 
     @media (max-width: 1024px) {

@@ -48,7 +48,7 @@
                 <textarea v-model="form.message" required></textarea>
             </div>
 
-            <button class="button" type="submit">
+            <button type="submit" class="buttonC">
                 Envoyer le message
             </button>
 
@@ -163,23 +163,6 @@ onMounted(() => {
     min-height: 120px;
     }
 
-    .button {
-    margin-top: 1rem;
-    padding: 0.8rem;
-    border-radius: 8px;
-    border: none;
-    background-color: #7f5af0;
-    color: #fffffe;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-    box-shadow: 10px 10px 10px black;
-    }
-
-    .button:hover {
-    transform: scale(1.05);
-    }
-
     .success {
     margin-top: 1rem;
     color: #2cb67d;
@@ -193,15 +176,15 @@ onMounted(() => {
 
         h1 {
         font-size: 1.5rem;
-    }
+        }
 
-    h2 {
-        font-size: 1rem;
-    }
+        h2 {
+            font-size: 1rem;
+        }
 
-    p {
-        font-size: 0.9rem;
-    }
+        p {
+            font-size: 0.9rem;
+        }
     }
 
     @media (max-width: 1024px) {
