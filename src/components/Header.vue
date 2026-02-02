@@ -2,7 +2,10 @@
   <header class="header">
     <!-- Logo -->
     <div class="logo-section">
-      <img src="../assets/logo.png" alt="Logo" class="logo" />
+      <router-link to="/">
+        <img src="../assets/logo.png" alt="Logo" class="logo" />
+      </router-link>
+      
     </div>
 
     <!-- Burger menu -->

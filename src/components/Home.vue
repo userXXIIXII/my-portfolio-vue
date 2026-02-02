@@ -14,14 +14,135 @@
         <div class="right">
             <img src="../assets/intropic.jpg" alt="photo-profile" class="pp">
         </div>
-        
+        <div class="project">
+            <img src="../assets/cv.png" alt="CV Logo" class="logo">
+            <h3>Ma dernière création</h3>
+            
+            <div class="project-container">
+            <button @click="openModal">Ouvrir</button>
+
+                <div class="modal-container" :class="{ show: isModalOpen }" 
+                @click.self="closeModal">
+                    <div class="modal">
+                        <h1>CV - HTML/CSS</h1>
+                        <h2>31/01/2024</h2>
+                        <img src="../assets/CV-html.png" 
+                        alt="Projet IMG" class="project-img">
+                        <p>
+                            Ce projet est un CV réalisé uniquement avec 
+                            <strong>HTML</strong> et <strong>CSS</strong>. 
+                            Il présente mes informations personnelles, ma 
+                            formation, mes expériences et mes compétences.
+                            L’objectif était de pratiquer la structuration 
+                            du HTML et le stylisme de base avec CSS.
+                        </p>
+
+                        <a href="https://userxxiixii.github.io/CV-CEF/" target="_blank">
+                            <button>Démo</button>
+                        </a>
+                        <a href="https://github.com/userXXIIXII/CV-CEF" target="_blank">
+                            <button>GitHub</button>
+                        </a>                       
+
+                        <button @click="closeModal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </template>
 
 <script setup>
+
+    import { ref } from 'vue'
+
+    const isModalOpen = ref(false)
+
+    function openModal() {
+    isModalOpen.value = true
+    }
+
+    function closeModal() {
+    isModalOpen.value = false
+    }
+    
 </script>
 
 <style scoped>
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-container > button {
+        background-color: #7f5af0;
+        color: #fffffe;
+        height: 45px;
+        width: 100px;
+        transition: 0.3s ease;
+        box-shadow: 10px 10px 10px black;
+        cursor: pointer;
+    }
+
+
+    .logo {
+        height: 150px;
+        filter: drop-shadow(10px 10px 10px black);
+    }
+
+    .modal-container {
+       position: fixed;
+       top: 0;
+       left: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+       width: 100vw;
+       background-color: rgb(0, 0, 0, 0.3);
+       opacity: 0;
+       pointer-events: none;
+       z-index: 1000;
+    }
+
+    .modal-container.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .modal button {
+        background-color: #7f5af0;
+        color: #fffffe;
+        height: 45px;
+        width: 100px;
+        margin: 5px;
+        box-shadow: 10px 10px 10px black;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .modal button:hover {
+        transform: scale(1.10);
+    }
+
+    .modal {
+        background-color: #16161a;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 10px 10px 20px black;
+        width: 600px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .project-img {
+        height: 350px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 20px black;
+    }
+
     .home-container{
         flex: 1;
         display: flex;
@@ -64,7 +185,7 @@
     @media (max-width: 767px) {
         .home-container {
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column;
             padding: 20px;
         }
 
@@ -99,7 +220,7 @@
 
     @media (max-width: 1024px) {
         .home-container {
-            flex-direction: column-reverse;
+            flex-direction: column;
             padding-bottom: 20px;
         }
     }

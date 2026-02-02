@@ -72,6 +72,12 @@
     import pythonIcon from "../assets/python.png"
     import javaIcon from "../assets/java.png"
     import rubyIcon from "../assets/ruby.png"
+
+    import { onMounted } from 'vue'
+
+onMounted(() => {
+  window.scrollTo(0, 0)
+})
 </script>
 
 
