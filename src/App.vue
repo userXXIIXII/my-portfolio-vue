@@ -1,25 +1,26 @@
 <template>
   <div class="app">
-    <Header />      
+    <Header v-if="!isEmptyLayout" />      
     <main>
       <div class="page">
         <router-view />
       </div>   
     </main>
-    <Footer />      
+    <Footer v-if="!isEmptyLayout" />      
   </div>
 </template>
 
-<script>
+<script setup>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 
-export default {
-  components: {
-    Header,
-    Footer
-  }
-}
+// Hook pour récupérer la route actuelle
+const route = useRoute()
+
+// Computed qui devient true si la route a meta.layout === 'empty'
+const isEmptyLayout = computed(() => route.meta.layout === 'empty')
 </script>
 
 <style>

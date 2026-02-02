@@ -5,6 +5,6 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   define: {
-    __BUILD_DATE__: JSON.stringify(new Date().toLocaleDateString('fr-FR'))
+    __BUILD_DATE__: JSON.stringify(new Date().toLocaleDateString())
   }
 })
