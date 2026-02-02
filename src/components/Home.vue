@@ -1,5 +1,6 @@
 <template>
     <section class="home-container">
+
         <div class="left">           
             <p>Salut!👋 Je suis</p>
             <h1>Aarin Deb</h1>
@@ -11,9 +12,11 @@
                 C'est parti !
             </router-link>
         </div>
+
         <div class="right">
             <img src="../assets/intropic.jpg" alt="photo-profile" class="pp">
         </div>
+
         <div class="project">
             <img src="../assets/cv.png" alt="CV Logo" class="logo">
             <h2>Ma dernière création</h2>
@@ -23,6 +26,7 @@
 
                 <div class="modal-container" :class="{ show: isModalOpen }" 
                 @click.self="closeModal">
+
                     <div class="modal">
                         <h3>CV - HTML/CSS</h3>
                         <h4>31/01/2024</h4>
@@ -48,10 +52,15 @@
                                 Fermer
                             </button>
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+        
     </section>
 </template>
 

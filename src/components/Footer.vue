@@ -14,14 +14,14 @@
         </div>
         <div class="update">
             <p class="update">
-                Dernière mise à jour : {{ currentYear }}
+                Dernière mise à jour : {{ lastUpdate }}
             </p>
         </div>
     </section>
 </template>
 
 <script setup>
-    const currentYear = new Date().getFullYear()
+    const lastUpdate = __BUILD_DATE__
 </script>
 
 <style scoped>
