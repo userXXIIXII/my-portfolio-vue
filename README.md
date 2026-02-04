@@ -8,6 +8,9 @@ mes compétences et mon parcours.
 - Node.js
 - npm ou yarn
 
-## Installation
+## Installation et lancement
 ```bash
 npm install
+
+npm run dev
+
