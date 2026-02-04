@@ -16,14 +16,14 @@
                 </div>
             </div>
             <div class="projet-container">
-                <img src="..//assets/portfolio.png" alt="Portfolio Icon" class="icon">
-                <h3>Projet Portfolio</h3>
+                <img src="..//assets/weather-app.png" alt="Weather app Icon" class="icon">
+                <h3>Projet App Météo</h3>
                 <div class="button-container">
-                    <a href="https://github.com/userXXIIXII/my-portfolio-vue"
+                    <a href="https://github.com/userXXIIXII/weather_app"
                     target="_blank" class="buttonP">
                         GitHub
                     </a>
-                    <a href="http://localhost:5175/"
+                    <a href="https://userxxiixii.github.io/weather_app/"
                     target="_blank" class="buttonP">
                         Démo
                     </a>

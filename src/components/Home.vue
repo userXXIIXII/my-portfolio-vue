@@ -18,34 +18,33 @@
         </div>
 
         <div class="project">
-            <img src="../assets/cv.png" alt="CV Logo" class="logo">
-            <h2>Ma dernière création</h2>
+            <img src="../assets/weather-app.png" alt="Weather app Icon" class="logo">
+            <h2><em>Ma dernière création</em></h2>
             
             <div class="project-container">
             <button @click="openModal" class="button">Ouvrir</button>
 
+            
                 <div class="modal-container" :class="{ show: isModalOpen }" 
                 @click.self="closeModal">
 
                     <div class="modal">
-                        <h3>CV - HTML/CSS</h3>
-                        <h4>31/01/2024</h4>
-                        <img src="../assets/CV-html.png" 
+                        <h3>App Météo</h3>
+                        <h4>31/01/2026</h4>
+                        <img src="../assets/weather-app-img.png" 
                         alt="Projet IMG" class="project-img">
                         <p>
-                            Ce projet est un CV réalisé uniquement avec 
-                            <strong>HTML</strong> et <strong>CSS</strong>. 
-                            Il présente mes informations personnelles, ma 
-                            formation, mes expériences et mes compétences.
-                            L’objectif était de pratiquer la structuration 
-                            du HTML et le stylisme de base avec CSS.
+                            Ce projet est une application météo développée en 
+                            <strong>HTML, CSS et JavaScript</strong>, permettant d’afficher la 
+                            météo en temps réel, avec pour objectif de s’exercer 
+                            à JavaScript et à l’utilisation d’une API.
                         </p>
 
                         <div class="modal-button-container">
-                            <a href="https://userxxiixii.github.io/CV-CEF/" target="_blank" class="button">
+                            <a href="https://userxxiixii.github.io/weather_app/" target="_blank" class="button">
                                 Démo
                             </a>
-                            <a href="https://github.com/userXXIIXII/CV-CEF" target="_blank" class="button">
+                            <a href="https://github.com/userXXIIXII/weather_app" target="_blank" class="button">
                                 GitHub
                             </a>   
                             <button @click="closeModal" class="button">

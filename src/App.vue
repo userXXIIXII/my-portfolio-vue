@@ -3,7 +3,9 @@
     <Header v-if="!isEmptyLayout" />      
     <main>
       <div class="page">
-        <router-view />
+        <transition name="fade" mode="out-in">
+          <router-view />
+        </transition>
       </div>   
     </main>
     <Footer v-if="!isEmptyLayout" />      
@@ -46,5 +48,15 @@ main {
   flex: 1;
   width: 100%;
   display: flex;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
