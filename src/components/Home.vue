@@ -202,6 +202,10 @@
             font-size: 0.9rem;
         }
 
+        .project-img {
+            height: 300px;
+        }
+
     }
 
     @media (max-width: 1024px) {
