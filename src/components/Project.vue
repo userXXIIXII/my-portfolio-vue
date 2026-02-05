@@ -90,8 +90,13 @@ onMounted(() => {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-
         padding: 1.5rem;
+
+        transition: 0.3s ease;
+    }
+
+    .projet-container:hover {
+        transform: scale(1.20);
     }
     
     .icon {
