@@ -41,10 +41,14 @@
                         </p>
 
                         <div class="modal-button-container">
-                            <a href="https://userxxiixii.github.io/weather_app/" target="_blank" class="button">
+                            <a href="https://userxxiixii.github.io/weather_app/" 
+                            target="_blank" 
+                            class="button">
                                 Démo
                             </a>
-                            <a href="https://github.com/userXXIIXII/weather_app" target="_blank" class="button">
+                            <a href="https://github.com/userXXIIXII/weather_app" 
+                            target="_blank" 
+                            class="button">
                                 GitHub
                             </a>   
                             <button @click="closeModal" class="button">
@@ -137,6 +141,7 @@
         justify-content: center;
         gap: 20px;
     }
+   
 
     .project-img {
         height: 350px;

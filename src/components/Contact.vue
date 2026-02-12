@@ -39,11 +39,6 @@
             </div>
 
             <div class="form-group">
-                <label>Email</label>
-                <input type="email" v-model="form.email" required />
-            </div>
-
-            <div class="form-group">
                 <label>Message</label>
                 <textarea v-model="form.message" required></textarea>
             </div>
@@ -69,7 +64,6 @@ const success = ref(false)
 
 const form = reactive({
   name: '',
-  email: '',
   message: ''
 })
 
@@ -80,7 +74,6 @@ const handleSubmit = () => {
 
   // reset du formulaire
   form.name = ''
-  form.email = ''
   form.message = ''
 }
 
