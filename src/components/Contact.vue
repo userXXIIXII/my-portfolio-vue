@@ -27,54 +27,84 @@
         </div>
 
         <div class="contact">
-            <h1>Contact</h1>
-            <p>Une question, un projet ou une collaboration ? 
-                N'hésitez pas à me contacter.
-            </p>
+        <h1>Contact</h1>
+        <p>Une question, un projet ou une collaboration ? 
+            N'hésitez pas à me contacter.
+        </p>
 
-            <form @submit.prevent="handleSubmit" class="contact-form">
+        <form @submit.prevent="handleSubmit" class="contact-form">
+
             <div class="form-group">
-                <label>Nom</label>
-                <input type="text" v-model="form.name" required />
+            <label for="nom">Nom</label>
+            <input id="nom" type="text" v-model="form.nom" required />
             </div>
 
             <div class="form-group">
-                <label>Message</label>
-                <textarea v-model="form.message" required></textarea>
+            <label for="prenom">Prénom</label>
+            <input id="prenom" type="text" v-model="form.prenom" required />
+            </div>
+
+            <div class="form-group">
+            <label for="objet">Objet</label>
+            <input id="objet" type="text" v-model="form.objet" required />
+            </div>
+
+            <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" v-model="form.message" required></textarea>
             </div>
 
             <button type="submit" class="buttonC">
-                Envoyer le message
+            Envoyer le message
             </button>
 
             <p v-if="success" class="success">
-                Message envoyé avec succès !
+            Message envoyé avec succès !
             </p>
-            </form>
-        </div>
 
-    
+        </form>
+        </div>
+   
 </section>
 </template>
 
 <script setup>
 import { reactive, ref } from 'vue'
+import emailjs from '@emailjs/browser'
+
+const form = reactive({
+    nom: '',
+    prenom: '',
+    objet: '',
+    message: ''
+})
 
 const success = ref(false)
 
-const form = reactive({
-  name: '',
-  message: ''
-})
+const handleSubmit = async () => {
+    console.log('handleSubmit triggered')
+    try {
+        await emailjs.send(
+            import.meta.env.VITE_EMAILJS_SERVICE,
+            import.meta.env.VITE_EMAILJS_TEMPLATE,
+            {
+                nom: form.nom,
+                prenom: form.prenom,
+                objet: form.objet,
+                message: form.message,
+                to_email: import.meta.env.VITE_CONTACT_EMAIL
+            },
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
 
-const handleSubmit = () => {
-  console.log(form) // pour test
-
-  success.value = true
-
-  // reset du formulaire
-  form.name = ''
-  form.message = ''
+        success.value = true
+        form.nom = ''
+        form.prenom = ''
+        form.objet = ''
+        form.message = ''
+    } catch (error) {
+        console.error('Erreur envoi email:', error)
+    }
 }
 
 import { onMounted } from 'vue'
