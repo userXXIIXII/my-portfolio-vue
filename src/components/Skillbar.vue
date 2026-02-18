@@ -10,15 +10,15 @@
 
 
     <div class="progress-bar">
-      <div
-        class="progress"
-        :style="{ width: level + '%' }"
-      ></div>
+      <div class="progress"
+          :style="{ width: level + '%' }"> <!-- la largeur de la barre s'ajuste en fonction de level-->
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
+// Prop -> données que le parent (Skill.vue) envoie à l'enfant (Skillbar.vue) pour personnaliser ou configurer ce composant
 defineProps({
   name: String,
   level: Number,
@@ -27,7 +27,7 @@ defineProps({
 </script>
 
 <style scoped>
-  .skill {
+.skill {
   margin-bottom: 24px;
 }
 

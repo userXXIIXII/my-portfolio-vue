@@ -14,8 +14,9 @@ const routes = [
   { path: '/skill', name: 'Skill', component: Skill },
   { path: '/project', name: 'Project', component: Project },
   { path: '/contact', name: 'Contact', component: Contact },
-  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound, 
-    meta: { layout: 'empty'} } 
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound, meta: { layout: 'empty'} } 
+  // (.*) -> expression régulière qui signifie: "n'importe quel caractère, zéro ou plusieurs fois"
+  // * -> permet de capturer plusieurs segments
 ]
 
 const router = createRouter({

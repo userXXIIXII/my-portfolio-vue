@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <Header v-if="!isEmptyLayout" />      
+    <Header v-if="!isEmptyLayout" /> <!-- Header affiché si isEmptyLayout = false-->     
     <main>
       <div class="page">
         <transition name="fade" mode="out-in">
@@ -8,7 +8,7 @@
         </transition>
       </div>   
     </main>
-    <Footer v-if="!isEmptyLayout" />      
+    <Footer v-if="!isEmptyLayout" />  <!-- Footer affiché si isEmptyLayout = false-->    
   </div>
 </template>
 
@@ -40,8 +40,8 @@ html, body {
 }
 
 main {
-  flex: 1;
-  display: flex;
+  display: 
+  flex;flex: 1;
 }
 
 .page {

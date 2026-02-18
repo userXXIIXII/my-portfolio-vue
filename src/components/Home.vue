@@ -22,12 +22,15 @@
             <h2><em>Ma dernière création</em></h2>
             
             <div class="project-container">
+            <!-- déclenche une méthode vue qui modifie un état (isModalOpen) -->
             <button @click="openModal" class="button">Ouvrir</button>
-
-            
-                <div class="modal-container" :class="{ show: isModalOpen }" 
-                @click.self="closeModal">
-
+          
+                <div class="modal-container" 
+                    :class="{ show: isModalOpen }" 
+                    @click.self="closeModal">
+                <!-- :class -> classe dynamique, ajoute la classe show uniquement si la modal est ouverte -->
+                <!-- @click.self -> clic fonctionne uniquement sur le fond et évite la fermeture si on clique dans la modal -->
+                    
                     <div class="modal">
                         <h3>App Météo</h3>
                         <h4>31/01/2026</h4>
@@ -69,18 +72,22 @@
 
 <script setup>
 
-    import { ref } from 'vue'
+    import { ref } from 'vue' // ref -> permet de créer une variable réactive
 
-    const isModalOpen = ref(false)
+    const isModalOpen = ref(false) // isModalOpen -> référence réactive, false -> modal fermée
+    // Vue réagit quand cette valeur (value) change
 
     function openModal() {
     isModalOpen.value = true
     }
+    // fonction permettant d'ouvrir la modal
 
     function closeModal() {
     isModalOpen.value = false
     }
+    // fonction permettant de fermer la modal
     
+    // .value permet de dire à Vue que la valeur a changé
 </script>
 
 <style scoped>
@@ -115,15 +122,15 @@
        align-items: center;
        height: 100vh;
        width: 100vw;
-       background-color: rgb(0, 0, 0, 0.3);
-       opacity: 0;
-       pointer-events: none;
-       z-index: 1000;
+       background-color: rgb(0, 0, 0, 0.3); /* le fond perd en opacité pour le focus sur la modal*/
+       opacity: 0; /* Modal cachée par défaut*/
+       pointer-events: none; /* pas d'intéraction avec la souris*/
+       z-index: 1000; /* Assure que la modal est au-dessus de tous les autres éléments*/
     }
 
     .modal-container.show {
-        opacity: 1;
-        pointer-events: auto;
+        opacity: 1; /* Modal visible avec .show*/
+        pointer-events: auto; /* Intéraction avec la souris*/ 
     }
 
     .modal {
